@@ -103,8 +103,9 @@ Enter a name for the dashboard and click "Save" to store the dashboard configura
 This section breaks down the key metrics based on the SRE 4 Golden Signals framework. These signals help monitor the system health and performance.
 
 **Key Metrics:**
+
 _**1. Saturation (Resource Utilisation)**_
-Saturation measures the system's capacity and how full the resources are (CPU, memory, disk, etc.)
+- Saturation measures the system's capacity and how full the resources are (CPU, memory, disk, etc.)
 
 _**•	CPU Utilisation**_
 The query calculates the CPU usage percentage by subtracting the idle CPU time (as a percentage) from 100, using the irate function to measure the rate of change of idle time over the last 5 minutes. If utilisation is above 85% utilization often indicates the CPU is nearing saturation and may cause: 
