@@ -125,7 +125,7 @@ _**•	Memory Utilisation**_
 
 ![image](https://github.com/user-attachments/assets/57462672-7c87-41ad-9948-8d92532fed43)
 
-•	**Disk Saturation**
+_**•	Disk Saturation**_
 - High disk read/write activity might indicate heavy workloads or bottlenecks.
 - This This query calculates the rate of disk read and write bytes over the last 5 minutes.
 - Data Source: Promethues
@@ -133,7 +133,7 @@ _**•	Memory Utilisation**_
 
 ![image](https://github.com/user-attachments/assets/27b3bc1b-a4b2-408a-8051-8be11c7706f0)
 
-•	_**2. Traffic (Request Volume)**_
+_**2. Traffic (Request Volume)**_
 - Traffic measures the load on the system, whether it is operating within expected capacity. This is vital for understanding demand and identifying potential overloading.
 
 
@@ -146,7 +146,7 @@ _**•	Memory Utilisation**_
 
 ![image](https://github.com/user-attachments/assets/87d58c4d-63d7-44d8-9e58-e50f7ebedc9e)
 
-•	_**3. Error (Request Volume)**
+_**3. Error (Request Volume)**_
 - Tracks the rate or number of times requests to application fails.
 
 •	**HTTP Error (4xx - Client) (5xx - Server)**
@@ -166,7 +166,7 @@ _**•	Memory Utilisation**_
 
 ![image](https://github.com/user-attachments/assets/b7ca27f1-0b4a-43a8-842d-0909401570cc)
 
-•	**4. Latency**
+_**4. Latency**_
 -  Latency measures the time it takes for a request or transaction to complete. This is important for both system and application performance.
 
 •	**HTTP Response Latency**
