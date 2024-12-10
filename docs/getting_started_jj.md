@@ -173,7 +173,9 @@ _**•	Memory Utilisation**_
 - This query calculates the average HTTP request duration for the Prometheus job ce7-grp-1-prome-kube-prome-prometheus in the "monitoring" namespace over the last 5 minutes.
 - Ideally we want this to be constant (i.e. flat).Increased latency indicates potential application or backend bottlenecks
 - Data Source: Prometheus
--  ```bash sum(rate(prometheus_http_request_duration_seconds_sum{namespace="monitoring", job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))/sum(rate(prometheus_http_request_duration_seconds_count{namespace="monitoring",job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))```
+```bash
+sum(rate(prometheus_http_request_duration_seconds_sum{namespace="monitoring", job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))/sum(rate(prometheus_http_request_duration_seconds_count{namespace="monitoring",job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))
+```
 
 ![image](https://github.com/user-attachments/assets/f7134e64-1ba7-4981-9b7e-6c1b34601418)
 
