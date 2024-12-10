@@ -42,12 +42,12 @@ To create a dashboard on Grafana localhost from scratch. Follow these steps:
 
 1. Access Grafana
 Open your browser and go to Grafana’s web interface, typically available at
-```bash http://localhost:3000```
+```http://localhost:3000```
 
 2. The default login credentials are:
 
-- Username: ```bash admin```
-- Password: ```bash admin (or prom-operator)```
+- Username: ```admin```
+- Password: ```admin (or prom-operator)```
 
 3. Add Prometheus and Loki Data Sources
 Before creating the dashboard, ensure that Prometheus and Loki are added as data sources:
@@ -173,9 +173,7 @@ _**•	Memory Utilisation**_
 - This query calculates the average HTTP request duration for the Prometheus job ce7-grp-1-prome-kube-prome-prometheus in the "monitoring" namespace over the last 5 minutes.
 - Ideally we want this to be constant (i.e. flat).Increased latency indicates potential application or backend bottlenecks
 - Data Source: Prometheus
--  ```sum(rate(prometheus_http_request_duration_seconds_sum{namespace="monitoring", job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))
-/
-sum(rate(prometheus_http_request_duration_seconds_count{namespace="monitoring",job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))```
+-  ```sum(rate(prometheus_http_request_duration_seconds_sum{namespace="monitoring", job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))/sum(rate(prometheus_http_request_duration_seconds_count{namespace="monitoring",job="ce7-grp-1-prome-kube-prome-prometheus"}[5m]))```
 
 ![image](https://github.com/user-attachments/assets/f7134e64-1ba7-4981-9b7e-6c1b34601418)
 
